@@ -1,0 +1,98 @@
+ 
+<html>
+  <head>
+    <title>Hand gestures To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h3 class="btn btn-warning heading">HAND GESTURES TO EMOJI WEBSITE</h3>
+       <br>
+       <span>&#9754;</span>
+       <span>&#9755;</span>
+       <span>&#9758;</span>
+       <span>&#9759;</span>
+       <span>&#9756;</span>
+       <span>&#9757;</span>
+       <span>&#9994;</span>
+       <span>&#9995;</span>
+       <span>&#9996;</span>
+       <span>&#9997;</span>
+       <span>&#128070;</span>
+       <span>&#128071;</span>
+       <span>&#128072;</span>
+       <span>&#128073;</span>
+       <span>&#128074;</span>
+       <span>&#128075;</span>
+       <span>&#128076;</span>
+       <span>&#128077;</span>
+       <span>&#128078;</span>
+       <span>&#128079;</span>
+       <span>&#128080;</span>
+       <span> &#128400;</span>
+       <span>&#128406;</span>
+       <span>&#129304;</span>
+       
+      <br><br>
+
+      <p style="font-size: 22px;">Take a photo of a hand gestures and convert them to emojies
+      	<br>
+        <b style="color: rgb(0, 255,0)">Amazing</b>
+        <br>
+        <b style="color: rgb(0, 0, 255)">Good</b>
+        <br>
+        <b style="color: rgb(255, 0, 0)">Vitory</b>
+        <br>
+      </p>
+
+      <p>
+        The website is trained to identify the following:-  <hr><span>&#9996;</span>  <span>&#128077;</span>  <span>&#128076;</span>
+      </p>
+      
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Webcam View: </label>
+      <div id="camera"></div>
+      <br>
+      <button class="btn btn-danger" onclick="snap()">Capture</button>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Prediction 1 - </label>
+        <p class="emotion_name" id="result_emotion_name1"></p>
+        <p class="emoji" id="update_emoji1"></p>
+        
+        <label>Prediction 2 - </label>
+        <p class="emotion_name" id="result_emotion_name2"></p>
+        <p class="emoji" id="update_emoji2"></p>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+         <div id="result"></div>
+        <br>
+        <button class="btn btn-success" onclick="predict()">Predict Emotion</button>
+
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
