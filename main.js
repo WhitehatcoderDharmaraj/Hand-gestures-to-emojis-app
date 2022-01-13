@@ -28,7 +28,35 @@ function modelLoaded(){
 
 function speak(){
     var synth=window.speechSynthesis;
-     speak_1="The first prediction is"+prediction_1;
+     speak_data_1="The first prediction is"+prediction_1;
       var utterThis=new SpeechSynthesisUtterance(speak_1);
       synth.speak(utterThis);
 }
+
+function predict(){
+    img=document.getElementById("captured_img");
+    classifier.classify(img, gotResult);
+    }
+    
+    function gotResult(error, results){
+    if(error){
+        console.error();
+    }
+    else{
+        console.log(results);
+        document.getElementById("result_emotion_name1").innerHTML=results[0].label;
+        prediction_1=results[0].label;
+        speak();
+    
+        if(results[0].label == "Amazing"){
+            document.getElementById("update_emoji1").innerHTML="&#128076";
+        }
+        if(results[0].label == "Victory"){
+            document.getElementById("update_emoji1").innerHTML="&#9996";
+        }
+        if(results[0].label == "Good"){
+            document.getElementById("update_emoji1").innerHTML="&#128077";
+        }
+    }
+    }
+    
